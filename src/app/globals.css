@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .heroButton {
+    @apply px-6 py-2 border-[#0d0d6e] rounded-full uppercase text-xs tracking-widest text-[#335c85] transition-all hover:border-[#00ff00]/40 hover:text-[#00ff00]/40 hover:border
+  }
+}
+
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
