@@ -4,12 +4,20 @@ import { Cursor, useTypewriter } from "react-simple-typewriter"
 import BackgroundCircles from "./BackgroundCircles"
 import Image from "next/image"
 import Link from "next/link";
+import { useRef } from "react";
 
 import image from '../../public/me/qmun.jpg';
 
 type Props = {}
 
 export default function Hero({ }: Props) {
+
+  const aboutRef = useRef<HTMLAnchorElement>(null!);
+
+  const handleScrollToAbout = () => {
+    aboutRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
   const [text, count] = useTypewriter({
     words: ["Hi, The Name's Ma'mun Ramdhan", "Guy-who-loves-Coffee.tsx", "<ButLovesToCodeMore />"],
     loop: true,
@@ -26,16 +34,16 @@ export default function Hero({ }: Props) {
           <Cursor cursorColor="#00ff00" />
         </h1>
         <div className="pt-5">
-          <Link href="#about">
-            <button className="heroButton">About</button>
-          </Link>
-          <Link href="#experience">
+          <a ref={aboutRef}>
+            <button className="heroButton" onClick={handleScrollToAbout}>About</button>
+          </a>
+          <Link href="experience">
             <button className="heroButton">Experience</button>
           </Link>
-          <Link href="#skills">
+          <Link href="skills">
             <button className="heroButton">Skills</button>
           </Link>
-          <Link href="#projects">
+          <Link href="projects">
             <button className="heroButton">Projects</button>
           </Link>
         </div>

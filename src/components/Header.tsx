@@ -5,6 +5,8 @@ import { SocialIcon } from "react-social-icons";
 
 type Props = {}
 
+const color = '#00b21f'
+
 export default function Header({ }: Props) {
   return (
     <header className="sticky top-0 mx-auto p-5 flex items-start justify-between max-w-7xl z-20 xl:items-center">
@@ -26,17 +28,17 @@ export default function Header({ }: Props) {
         {/* Social Icons */}
         <SocialIcon
           url="https://twitter.com/mr_dh4n"
-          fgColor="gray"
+          fgColor={color}
           bgColor="transparent"
         />
         <SocialIcon
           url="https://twitter.com/mr_dh4n"
-          fgColor="gray"
+          fgColor={color}
           bgColor="transparent"
         />
         <SocialIcon
           url="https://twitter.com/mr_dh4n"
-          fgColor="gray"
+          fgColor={color}
           bgColor="transparent"
         />
       </motion.div>
@@ -56,10 +58,10 @@ export default function Header({ }: Props) {
         <SocialIcon
           className="cursor-pointer"
           network="email"
-          fgColor="gray"
+          fgColor={color}
           bgColor="transparent"
         />
-        <p className="uppercase hidden md:inline-flex text-sm text-gray-400">Get In Touch</p>
+        <p className="uppercase hidden md:inline-flex text-sm text-main-font">Get In Touch</p>
       </motion.div>
     </header>
   )
