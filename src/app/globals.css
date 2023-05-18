@@ -6,28 +6,10 @@
   .heroButton {
     @apply px-6 py-2 border-[#0d0d6e] rounded-full uppercase text-xs tracking-widest text-[#335c85] transition-all hover:border-[#00ff00]/40 hover:text-[#00ff00]/40 hover:border
   }
-}
 
-/* :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  .contactInput {
+    @apply outline-none bg-blue-900/50 rounded-sm border-b px-4 py-4 border-[#0d0d6e]  focus:border-[#8080b2] text-blue-500   focus:text-[#61f236] hover:border-[#8080b2]  placeholder-[#296652] transition-all max-sm:w-[97%] max-sm:justify-center
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-} */
+
