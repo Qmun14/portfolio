@@ -1,7 +1,23 @@
+"use client"
+
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from '@heroicons/react/24/solid'
+import { SubmitHandler, useForm } from 'react-hook-form';
+
+type Inputs = {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+};
+
 type Props = {}
 
 export default function ContactMe({ }: Props) {
+  const { register, handleSubmit, } = useForm<Inputs>();
+  const onSubmit: SubmitHandler<Inputs> = (formData) => {
+    window.location.href = `mailto:mamunramdhan@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message} (${formData.email})`;
+  };
+
   return (
     <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
       <h3 className="absolute top-24 uppercase tracking-[20px] text-main-font text-2xl">
@@ -30,14 +46,14 @@ export default function ContactMe({ }: Props) {
             <p className='text-2xl max-sm:text-base'>Kab.Bogor, Jawa Barat Indonesia</p>
           </div>
         </div>
-        <form className="flex flex-col space-y-2 w-fit mx-auto">
+        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-2 w-fit mx-auto">
           <div className='flex space-x-2 max-sm:w-[97%]'>
-            <input placeholder='Name' className='contactInput' type="text" />
-            <input placeholder='Email' className='contactInput' type="email" />
+            <input {...register('name')} placeholder='Name' className='contactInput' type="text" />
+            <input {...register('email')} placeholder='Email' className='contactInput' type="email" />
           </div>
-          <input placeholder='Subject' className='contactInput' type="text" />
+          <input {...register('subject')} placeholder='Subject' className='contactInput' type="text" />
 
-          <textarea placeholder='Message' className='contactInput' />
+          <textarea {...register('message')} placeholder='Message' className='contactInput' />
           <button type='submit' className='bg-[#00b21f] max-sm:w-[97%] text-[#0f172a] font-bold py-5 px-10 rounded-md'>Submit</button>
         </form>
 
