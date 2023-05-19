@@ -14,7 +14,7 @@ export default function Projects({ }: Props) {
         Projects
       </h3>
 
-      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20">
+      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin  scrollbar-track-blue-800/20 scrollbar-thumb-[#00b21f]/80">
         {projects.map((project, index) => (
           <div
             key={index}
