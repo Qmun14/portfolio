@@ -29,7 +29,7 @@ export default function Header({ }: Props) {
         className="flex flex-row items-center">
         {/* Social Icons */}
         <SocialIcon
-          url="https://twitter.com/mr_dh4n"
+          url="https://www.linkedin.com/in/ma-mun-ramdhan-540ab824b"
           fgColor={color}
           bgColor="transparent"
         />
@@ -39,7 +39,14 @@ export default function Header({ }: Props) {
           bgColor="transparent"
         />
         <SocialIcon
-          url="https://twitter.com/mr_dh4n"
+          network="whatsapp"
+          url="https://wa.link/bq3grb"
+          fgColor={color}
+          bgColor="transparent"
+        />
+        <SocialIcon
+          network="youtube"
+          url=""
           fgColor={color}
           bgColor="transparent"
         />

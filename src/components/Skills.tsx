@@ -24,7 +24,7 @@ export default function Skills({ }: Props) {
         Hover over a skill for the current profeciency
       </h3>
 
-      <div className="grid grid-cols-4 gap-5">
+      <div className="grid grid-cols-4 gap-5 max-sm:gap-4">
         {
           skills.slice(0, skills.length / 2).map((skill, i) => (
             <Skill key={i} skill={skill} />

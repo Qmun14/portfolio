@@ -1,12 +1,13 @@
 "use client"
 
-import jdih from '../../public/assets/image/projects/JDIH-setneg.png'
 import { motion } from "framer-motion";
+import { projects as projectsData } from '../../data';
+import { useState } from "react";
 
 type Props = {};
 
 export default function Projects({ }: Props) {
-  const projects = [1, 2, 3, 4, 5, 6];
+  const [projects, setProjects] = useState(projectsData)
 
   return (
     <div className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0">
@@ -29,7 +30,7 @@ export default function Projects({ }: Props) {
               transition={{ duration: 1.2 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              src={jdih.src}
+              src={project.image_path}
               alt=""
               width={450}
               height={450}
@@ -41,11 +42,11 @@ export default function Projects({ }: Props) {
                   {" "}
                   Case {index + 1} of {projects.length}:
                 </span>{" "}
-                JDIH Kemensetneg
+                {project.name}
               </h4>
 
               <p className="text-lg text-center md:text-left max-sm:text-base">
-                As an integrated database system, The JDIH is a web innovation built by the Deputy of Legislation and Legal Administration in the form of a website, which contains 2 (two) main features, namely (1) the backend feature, as a data warehouse, and (2) the frontend feature, which contains data on new laws and regulations signed by the President and Minister of State Secretary and can be accessed directly by legal document managers of ministries/institutions and the wider community.
+                {project.description}
               </p>
             </div>
           </div>

@@ -24,13 +24,13 @@ export default function ContactMe({ }: Props) {
         Contact
       </h3>
 
-      <div className="flex flex-col space-y-10">
-        <h4 className="text-4xl font-semibold text-center max-sm:text-2xl">
+      <div className="flex flex-col space-y-10 max-sm:absolute max-sm:top-36 max-sm:space-y-5">
+        <h4 className="text-4xl font-semibold text-center max-sm:text-xl max-sm:mx-5">
           I have got just what you need. {" "}
           <span className=" decoration-[#61f236]/50 underline "> Lets Talk.</span>
         </h4>
 
-        <div className='space-y-10'>
+        <div className='space-y-10 max-sm:space-y-1'>
           <div className="flex items-center space-x-5 justify-center">
             <PhoneIcon className=' text-[#61f236] h-7 w-7 animate-pulse' />
             <p className='text-2xl max-sm:text-lg'>+62-856-9336-9108</p>
@@ -43,18 +43,18 @@ export default function ContactMe({ }: Props) {
 
           <div className="flex items-center space-x-5 justify-center">
             <MapPinIcon className=' text-[#61f236] h-7 w-7 animate-pulse' />
-            <p className='text-2xl max-sm:text-base'>Kab.Bogor, Jawa Barat Indonesia</p>
+            <p className='text-2xl max-sm:text-base'>Kab. Bogor, Jawa Barat. Indonesia</p>
           </div>
         </div>
-        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-2 w-fit mx-auto">
-          <div className='flex space-x-2 max-sm:w-[97%]'>
+        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-2 w-fit mx-auto  max-sm:mx-5">
+          <div className='flex space-x-2'>
             <input {...register('name')} placeholder='Name' className='contactInput' type="text" />
             <input {...register('email')} placeholder='Email' className='contactInput' type="email" />
           </div>
-          <input {...register('subject')} placeholder='Subject' className='contactInput' type="text" />
+          <input {...register('subject')} placeholder='Subject' className='contactInput w-full' type="text" />
 
-          <textarea {...register('message')} placeholder='Message' className='contactInput' />
-          <button type='submit' className='bg-[#00b21f] max-sm:w-[97%] text-[#0f172a] font-bold py-5 px-10 rounded-md'>Submit</button>
+          <textarea {...register('message')} placeholder='Message' className='contactInput w-full' />
+          <button type='submit' className='bg-[#00b21f]  text-[#0f172a] font-bold py-5 px-10 rounded-md'>Submit</button>
         </form>
 
       </div>

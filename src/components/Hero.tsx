@@ -28,8 +28,8 @@ export default function Hero({ }: Props) {
       <BackgroundCircles />
       <Image src={image} alt={"qmun foto"} height={150} width={150} className="relative rounded-full mx-auto object-cover" />
       <div className="z-20">
-        <h2 className="text-sm uppercase text-[#335c85] pb-2 tracking-[15px] ">Software Engineer</h2>
-        <h1 className="text-5xl lg:text-6xl font-semibold px-10">
+        <h2 className="text-sm uppercase text-[#335c85] pb-2 tracking-[15px] max-sm:tracking-[8px] ">Software Engineer</h2>
+        <h1 className="text-5xl lg:text-6xl font-semibold px-10 max-sm:text-2xl max-sm:w-full">
           <span className="mr-3">{text}</span>
           <Cursor cursorColor="#00ff00" />
         </h1>
@@ -37,9 +37,6 @@ export default function Hero({ }: Props) {
           <a ref={aboutRef}>
             <button className="heroButton" onClick={handleScrollToAbout}>About</button>
           </a>
-          <Link href="#experience">
-            <button className="heroButton">Experience</button>
-          </Link>
           <Link href="#skills">
             <button className="heroButton">Skills</button>
           </Link>
