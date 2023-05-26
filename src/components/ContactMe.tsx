@@ -20,30 +20,30 @@ export default function ContactMe({ }: Props) {
 
   return (
     <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-main-font text-2xl">
+      <h3 className="absolute top-24 uppercase tracking-[20px] text-main-font text-2xl max-sm:tracking-[12px]">
         Contact
       </h3>
 
-      <div className="flex flex-col space-y-10 max-sm:absolute max-sm:top-36 max-sm:space-y-5">
-        <h4 className="text-4xl font-semibold text-center max-sm:text-xl max-sm:mx-5">
+      <div className="flex flex-col space-y-10 max-sm:absolute max-sm:top-36 max-sm:space-y-5 lg:absolute lg:top-40">
+        <h4 className="text-4xl font-semibold text-center max-sm:text-xl max-sm:mx-5 lg:text-2xl">
           I have got just what you need. {" "}
           <span className=" decoration-[#61f236]/50 underline "> Lets Talk.</span>
         </h4>
 
-        <div className='space-y-10 max-sm:space-y-1'>
+        <div className='space-y-10 max-sm:space-y-1 lg:space-y-3'>
           <div className="flex items-center space-x-5 justify-center">
-            <PhoneIcon className=' text-[#61f236] h-7 w-7 animate-pulse' />
-            <p className='text-2xl max-sm:text-lg'>+62-856-9336-9108</p>
+            <PhoneIcon className=' text-[#61f236] h-7 w-7 animate-pulse max-sm:h-5 max-sm:w-5' />
+            <p className='text-2xl lg:text-xl  max-sm:text-lg'>+62-856-9336-9108</p>
           </div>
 
           <div className="flex items-center space-x-5 justify-center">
-            <EnvelopeIcon className=' text-[#61f236] h-7 w-7 animate-pulse' />
-            <p className='text-2xl max-sm:text-lg'>mamunramdhan@gmail.com</p>
+            <EnvelopeIcon className=' text-[#61f236] h-7 w-7 animate-pulse  max-sm:h-5 max-sm:w-5' />
+            <p className='text-2xl lg:text-xl max-sm:text-lg'>mamunramdhan@gmail.com</p>
           </div>
 
           <div className="flex items-center space-x-5 justify-center">
-            <MapPinIcon className=' text-[#61f236] h-7 w-7 animate-pulse' />
-            <p className='text-2xl max-sm:text-base'>Kab. Bogor, Jawa Barat. Indonesia</p>
+            <MapPinIcon className=' text-[#61f236] h-7 w-7 animate-pulse  max-sm:h-5 max-sm:w-5' />
+            <p className='text-2xl lg:text-xl max-sm:text-base'>Kab. Bogor, Jawa Barat. Indonesia</p>
           </div>
         </div>
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-2 w-fit mx-auto  max-sm:mx-5">

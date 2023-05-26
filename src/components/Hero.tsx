@@ -3,8 +3,7 @@
 import { Cursor, useTypewriter } from "react-simple-typewriter"
 import BackgroundCircles from "./BackgroundCircles"
 import Image from "next/image"
-import Link from "next/link";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 import image from '../../public/me/qmun.jpg';
 
@@ -12,10 +11,23 @@ type Props = {}
 
 export default function Hero({ }: Props) {
 
-  const aboutRef = useRef<HTMLAnchorElement>(null!);
-
   const handleScrollToAbout = () => {
-    aboutRef.current.scrollIntoView({ behavior: 'smooth' });
+    const aboutRef = document.getElementById('about');
+    if (aboutRef) {
+      aboutRef.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  const handleScrollToSkills = () => {
+    const skillsRef = document.getElementById('skills');
+    if (skillsRef) {
+      skillsRef.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  const handleScrollToProjects = () => {
+    const projectsRef = document.getElementById('projects');
+    if (projectsRef) {
+      projectsRef.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   const [text, count] = useTypewriter({
@@ -34,15 +46,15 @@ export default function Hero({ }: Props) {
           <Cursor cursorColor="#00ff00" />
         </h1>
         <div className="pt-5">
-          <a ref={aboutRef}>
+          <a>
             <button className="heroButton" onClick={handleScrollToAbout}>About</button>
           </a>
-          <Link href="#skills">
-            <button className="heroButton">Skills</button>
-          </Link>
-          <Link href="#projects">
-            <button className="heroButton">Projects</button>
-          </Link>
+          <a>
+            <button className="heroButton" onClick={handleScrollToSkills}>Skills</button>
+          </a>
+          <a>
+            <button className="heroButton" onClick={handleScrollToProjects}>Projects</button>
+          </a>
         </div>
       </div>
     </div>

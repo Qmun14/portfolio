@@ -10,6 +10,13 @@ const color = '#00b21f'
 
 export default function Header({ }: Props) {
 
+  const handleScrollToContact = () => {
+    const contactRef = document.getElementById('contact');
+    if (contactRef) {
+      contactRef.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <header className="sticky top-0 mx-auto p-5 flex items-start justify-between max-w-7xl z-20 xl:items-center">
       <motion.div
@@ -51,7 +58,7 @@ export default function Header({ }: Props) {
           bgColor="transparent"
         />
       </motion.div>
-      <Link href="#contact">
+      <a onClick={handleScrollToContact}>
         <motion.div
           initial={{
             x: 500,
@@ -73,7 +80,7 @@ export default function Header({ }: Props) {
           />
           <p className="uppercase hidden md:inline-flex text-sm text-main-font">Get In Touch</p>
         </motion.div>
-      </Link>
+      </a>
     </header>
   )
 }
