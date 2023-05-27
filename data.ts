@@ -131,7 +131,7 @@ export const projects: Project[] = [
   {
     name: "Sistem Informasi LPSK",
     description: "As a management information system in the form of a web application developed by the Witness and Victim Protection Agency (LPSK).",
-    image_path: "/assets/image/projects/lpsk.png",
+    image_path: "/assets/image/projects/lpsk1.png",
     techs: [
       {
         name: "ci",
