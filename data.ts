@@ -58,6 +58,18 @@ export const skills: Skill[] = [
     level: 90
   },
   {
+    image_path: "/assets/image/skills/redis.png",
+    level: 80
+  },
+  {
+    image_path: "/assets/image/skills/kubernetes.png",
+    level: 80
+  },
+  {
+    image_path: "/assets/image/skills/docker.png",
+    level: 80
+  },
+  {
     image_path: "/assets/image/skills/spark.png",
     level: 90
   },
