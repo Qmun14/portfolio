@@ -18,6 +18,10 @@ export const skills: Skill[] = [
     level: 90
   },
   {
+    image_path: "/assets/image/skills/golang.png",
+    level: 90
+  },
+  {
     image_path: "/assets/image/skills/react.png",
     level: 95
   },
@@ -71,15 +75,12 @@ export const skills: Skill[] = [
   },
   {
     image_path: "/assets/image/skills/spark.png",
+
     level: 90
   },
   {
     image_path: "/assets/image/skills/figma.png",
     level: 90
-  },
-  {
-    image_path: "/assets/image/skills/photoshop.png",
-    level: 80
   },
 ]
 
